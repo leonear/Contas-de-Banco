@@ -1,4 +1,4 @@
-#Projeto de Python: entendendo a Orientação a Objetos
+#Projeto de Python: entendendo a Orientação a Objetos.
 #Leonardo Medeiros Silva Aparicio
 
 def cria_conta(numero, titular, saldo, limite):
@@ -13,3 +13,4 @@ def saque(conta, valor):
 
 def extrato(conta):
     print("Saldo é {}".format(conta["saldo"]))
+
