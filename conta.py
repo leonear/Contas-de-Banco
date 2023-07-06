@@ -14,3 +14,7 @@ class Conta:
 
     def saque(self, valor):
         self.__saldo -= valor
+
+    def transferir(self, valor, destino):
+        self.saque(valor) #self pode servir pra chamar um método também
+        destino.deposito(valor)
