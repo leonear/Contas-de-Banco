@@ -6,6 +6,7 @@ class Conta:
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limite
+
     def extrato(self):
         print("Saldo de {} do titular {}".format(self.__saldo, self.__titular))
 
@@ -42,3 +43,7 @@ class Conta:
     @limite.setter #simplifica o chamado do método setter - conta.limite = (valor desejado)
     def limite(self, limite):
         self.__limite = limite
+
+    @staticmethod       #método apenas usado em casos específicos em que os objetos compartilham algo em comum
+    def codigo_banco():  #método estático, não vai precisar do objeto, é possivel chamar ele sem criar uma conta
+        return "001"
