@@ -1,8 +1,8 @@
-
+# o self é responsavel por vincular os atributos com os argumentos que são enviados para uma função ou método
 class Conta:
-    def __init__(self, numero, titular, saldo, limite):
+    def __init__(self, numero, titular, saldo, limite): #init define o construtor da classe, onde serão definidos os atributos
         print("Construindo objeto... {}".format(self))
-        self.__numero = numero  #__ é a mesma coisa que o private em java
+        self.__numero = numero  #"__" antes do atributo é a mesma coisa que o private em java
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limite
@@ -25,8 +25,11 @@ class Conta:
     def get_titular(self):
         return self.__titular
 
-    def get__limite(self):
+    @property #simplifica o chamado do método get - conte.limite
+    def limite(self):
         return self.__limite
 
-    def set__limite(self, limite):
+
+    @limite.setter #simplifica o chamado do método setter - conta.limite = (valor desejado)
+    def limite(self, limite):
         self.__limite = limite
