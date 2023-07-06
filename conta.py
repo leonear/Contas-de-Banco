@@ -18,3 +18,15 @@ class Conta:
     def transferir(self, valor, destino):
         self.saque(valor) #self pode servir pra chamar um método também
         destino.deposito(valor)
+
+    def get_saldo(self):
+        return self.__saldo
+
+    def get_titular(self):
+        return self.__titular
+
+    def get__limite(self):
+        return self.__limite
+
+    def set__limite(self, limite):
+        self.__limite = limite
